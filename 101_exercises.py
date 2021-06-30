@@ -74,7 +74,7 @@ print("Exercise 9 is correct.")
 
 # Exercise 10
 # Write the code necessary to produce a single list that holds all fruits then all vegetables in the order as they were sorted above.
-
+fruits_and_veggies = fruits + vegetables  
 assert fruits_and_veggies == ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana', 'broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini']
 print("Exercise 10 is correct")
 
@@ -90,11 +90,11 @@ negative_even_number = random.randrange(-100, -1, 2)
 
 positive_odd_number = random.randrange(1, 100, 2)
 negative_odd_number = random.randrange(-101, 0, 2)
-print("We now have some random numbers available for future exercises.")
-print("The random positive even number is", positive_even_number)
-print("The random positive odd nubmer is", positive_odd_number)
-print("The random negative even number", negative_even_number)
-print("The random negative odd number", negative_odd_number)
+# print("We now have some random numbers available for future exercises.")
+# print("The random positive even number is", positive_even_number)
+# print("The random positive odd nubmer is", positive_odd_number)
+# print("The random negative even number", negative_even_number)
+# print("The random negative odd number", negative_odd_number)
 
 # Example function defintion:
 # Write a say_hello function that adds the string "Hello, " to the beginning and "!" to the end of any given input.
@@ -104,7 +104,7 @@ def say_hello(name):
 assert say_hello("Jane") == "Hello, Jane!", "Double check the inputs and data types"
 assert say_hello("Pat") == "Hello, Pat!", "Double check the inputs and data types"
 assert say_hello("Astrud") == "Hello, Astrud!", "Double check the inputs and data types"
-print("The example function definition ran appropriately")
+# print("The example function definition ran appropriately")
 
 # Another example function definition:
 # This plus_two function takes in a variable and adds 2 to it.
@@ -114,11 +114,12 @@ def plus_two(number):
 assert plus_two(3) == 5
 assert plus_two(0) == 2
 assert plus_two(-2) == 0
-print("The plus_two assertions executed appropriately... The second function definition example executed appropriately.")
+#print("The plus_two assertions executed appropriately... The second function definition example executed appropriately.")
 
 # Exercise 11
 # Write a function definition for a function named add_one that takes in a number and returns that number plus one.
-
+def add_one(a):
+    return a + 1
     
 assert add_one(2) == 3, "Ensure that the function is defined, named properly, and returns the correct value"
 assert add_one(0) == 1, "Zero plus one is one."
