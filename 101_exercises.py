@@ -114,7 +114,7 @@ def plus_two(number):
 assert plus_two(3) == 5
 assert plus_two(0) == 2
 assert plus_two(-2) == 0
-#print("The plus_two assertions executed appropriately... The second function definition example executed appropriately.")
+# print("The plus_two assertions executed appropriately... The second function definition example executed appropriately.")
 
 # Exercise 11
 # Write a function definition for a function named add_one that takes in a number and returns that number plus one.
@@ -129,6 +129,11 @@ print("Exercise 11 is correct.")
 
 # Exercise 12
 # Write a function definition named is_positive that takes in a number and returns True or False if that number is positive.
+def is_positive(x):
+    if x > 0:
+        return True
+    else:
+        return False
 
 assert is_positive(positive_odd_number) == True, "Ensure that the function is defined, named properly, and returns the correct value"
 assert is_positive(positive_even_number) == True, "Ensure that the function is defined, named properly, and returns the correct value"
@@ -139,7 +144,12 @@ print("Exercise 12 is correct.")
 
 # Exercise 13
 # Write a function definition named is_negative that takes in a number and returns True or False if that number is negative.
-
+def is_negative(x):
+    if x < 0:
+        return True
+    else:
+        return False
+        
 assert is_negative(positive_odd_number) == False, "Ensure that the function is defined, named properly, and returns the correct value"
 assert is_negative(positive_even_number) == False, "Ensure that the function is defined, named properly, and returns the correct value"
 assert is_negative(negative_odd_number) == True, "Ensure that the function is defined, named properly, and returns the correct value"
@@ -149,6 +159,11 @@ print("Exercise 13 is correct.")
 
 # Exercise 14
 # Write a function definition named is_odd that takes in a number and returns True or False if that number is odd.
+def is_odd(x):
+    if x%2 != 0:
+        return True
+    else:
+        return False
 
 assert is_odd(positive_odd_number) == True, "Ensure that the function is defined, named properly, and returns the correct value"
 assert is_odd(positive_even_number) == False, "Ensure that the function is defined, named properly, and returns the correct value"
@@ -158,6 +173,11 @@ print("Exercise 14 is correct.")
 
 # Exercise 15
 # Write a function definition named is_even that takes in a number and returns True or False if that number is even.
+def is_even(x):
+    if x%2 == 0:
+        return True
+    else:
+        return False
 
 assert is_even(2) == True, "Ensure that the function is defined, named properly, and returns the correct value"
 assert is_even(positive_odd_number) == False, "Ensure that the function is defined, named properly, and returns the correct value"
@@ -168,7 +188,9 @@ print("Exercise 15 is correct.")
 
 # Exercise 16
 # Write a function definition named identity that takes in any argument and returns that argument's value. Don't overthink this one!
-
+def identity(x):
+    return x
+    
 assert identity(fruits) == fruits, "Ensure that the function is defined, named properly, and returns the correct value"
 assert identity(vegetables) == vegetables, "Ensure that the function is defined, named properly, and returns the correct value"
 assert identity(positive_odd_number) == positive_odd_number, "Ensure that the function is defined, named properly, and returns the correct value"
@@ -179,6 +201,14 @@ print("Exercise 16 is correct.")
 
 # Exercise 17
 # Write a function definition named is_positive_odd that takes in a number and returns True or False if the value is both greater than zero and odd
+def is_positive_odd(x):
+    if x > 0:
+        if x%2 != 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 assert is_positive_odd(3) == True, "Double check your syntax and logic" 
 assert is_positive_odd(positive_odd_number) == True, "Double check your syntax and logic"
@@ -189,6 +219,14 @@ print("Exercise 17 is correct.")
 
 # Exercise 18
 # Write a function definition named is_positive_even that takes in a number and returns True or False if the value is both greater than zero and even
+def is_positive_even(x):
+    if x > 0:
+        if x%2 == 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 assert is_positive_even(4) == True, "Double check your syntax and logic" 
 assert is_positive_even(positive_odd_number) == False, "Double check your syntax and logic"
@@ -199,6 +237,14 @@ print("Exercise 18 is correct.")
 
 # Exercise 19
 # Write a function definition named is_negative_odd that takes in a number and returns True or False if the value is both less than zero and odd.
+def is_negative_odd(x):
+    if x < 0:
+        if x%2 != 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 assert is_negative_odd(-3) == True, "Double check your syntax and logic" 
 assert is_negative_odd(positive_odd_number) == False, "Double check your syntax and logic"
@@ -209,6 +255,14 @@ print("Exercise 19 is correct.")
 
 # Exercise 20
 # Write a function definition named is_negative_even that takes in a number and returns True or False if the value is both less than zero and even.
+def is_negative_even(x):
+    if x < 0:
+        if x%2 == 0:
+            return True
+        else:
+            return False
+    else:
+        return False
 
 assert is_negative_even(-4) == True, "Double check your syntax and logic" 
 assert is_negative_even(positive_odd_number) == False, "Double check your syntax and logic"
