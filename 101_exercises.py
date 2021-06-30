@@ -10,6 +10,7 @@ print("Exercise 0 is correct") # This line will print if your solution passes th
 # Exercise 1
 # On the line below, create a variable named on_mars_right_now and assign it the boolean value of False
 on_mars_right_now = False
+
 assert on_mars_right_now == False, "If you see a Name Error, be sure to create the variable and assign it a value."
 print("Exercise 1 is correct.")
 
@@ -17,6 +18,7 @@ print("Exercise 1 is correct.")
 # Create a variable named fruits and assign it a list of fruits containing the following fruit names as strings: 
 # mango, banana, guava, kiwi, and strawberry.
 fruits = ["mango", "banana", "guava", "kiwi", "strawberry"] 
+
 assert fruits == ["mango", "banana", "guava", "kiwi", "strawberry"], "If you see an Assert Error, ensure the variable contains all the strings in the provided order"
 print("Exercise 2 is correct.")
 
@@ -24,6 +26,7 @@ print("Exercise 2 is correct.")
 # Create a variable named vegetables and assign it a list of fruits containing the following vegetable names as strings: 
 # eggplant, broccoli, carrot, cauliflower, and zucchini
 vegetables = ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini"]
+
 assert vegetables == ["eggplant", "broccoli", "carrot", "cauliflower", "zucchini"], "Ensure the variable contains all the strings in the provided order"
 print("Exercise 3 is correct.")
 
@@ -55,20 +58,22 @@ print("Exercise 6 is correct")
 # Exercise 7
 # Given the list of numbers defined below, reverse the list of numbers that you created above. 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
 numbers.reverse()
+
 assert numbers == [10, 9, 8, 7, 6, 5, 4, 3, 2, 1], "Assert Error means that the answer is incorrect." 
 print("Exercise 7 is correct.")
 
 # Exercise 8
 # Sort the vegetables in alphabetical order
 vegetables.sort()
+
 assert vegetables == ['broccoli', 'carrot', 'cauliflower', 'eggplant', 'tomato', 'zucchini']
 print("Exercise 8 is correct.")
 
 # Exercise 9
 # Write the code necessary to sort the fruits in reverse alphabetical order
 fruits.sort(reverse = True)
+
 assert fruits == ['tomato', 'strawberry', 'mango', 'kiwi', 'guava', 'banana']
 print("Exercise 9 is correct.")
 
@@ -273,6 +278,8 @@ print("Exercise 20 is correct.")
 
 # Exercise 21
 # Write a function definition named half that takes in a number and returns half the provided number.
+def half(x):
+    return x / 2
 
 assert half(4) == 2
 assert half(5) == 2.5
@@ -284,7 +291,9 @@ print("Exercise 21 is correct.")
 
 # Exercise 22
 # Write a function definition named double that takes in a number and returns double the provided number.
-
+def double(x):
+    return x * 2
+    
 assert double(4) == 8
 assert double(5) == 10
 assert double(positive_odd_number) == positive_odd_number * 2
@@ -295,7 +304,9 @@ print("Exercise 22 is correct.")
 
 # Exercise 23
 # Write a function definition named triple that takes in a number and returns triple the provided number.
-
+def triple(x):
+    return x * 3
+    
 assert triple(4) == 12
 assert triple(5) == 15
 assert triple(positive_odd_number) == positive_odd_number * 3
@@ -306,6 +317,8 @@ print("Exercise 23 is correct.")
 
 # Exercise 24
 # Write a function definition named reverse_sign that takes in a number and returns the provided number but with the sign reversed.
+def reverse_sign(x):
+    return x * -1 
 
 assert reverse_sign(4) == -4
 assert reverse_sign(-5) == 5
@@ -317,6 +330,8 @@ print("Exercise 24 is correct.")
 
 # Exercise 25
 # Write a function definition named absolute_value that takes in a number and returns the absolute value of the provided number
+def absolute_value(x):
+    return abs(x) 
 
 assert absolute_value(4) == 4
 assert absolute_value(-5) == 5
