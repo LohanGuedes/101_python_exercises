@@ -662,6 +662,8 @@ print("Exercise 49 is correct.")
 
 # Exercise 50
 # Write a function definition named first that takes in sequence and returns the first value of that sequence.
+def first(x):
+    return x[0]
 
 assert first("ubuntu") == "u"
 assert first([1, 2, 3]) == 1
@@ -670,6 +672,8 @@ print("Exercise 50 is correct.")
 
 # Exercise 51
 # Write a function definition named second that takes in sequence and returns the second value of that sequence.
+def second(x):
+    return x[1]
 
 assert second("ubuntu") == "b"
 assert second([1, 2, 3]) == 2
@@ -678,6 +682,8 @@ print("Exercise 51 is correct.")
 
 # Exercise 52
 # Write a function definition named third that takes in sequence and returns the third value of that sequence.
+def third(x):
+    return x[2]
 
 assert third("ubuntu") == "u"
 assert third([1, 2, 3]) == 3
@@ -686,6 +692,8 @@ print("Exercise 52 is correct.")
 
 # Exercise 53
 # Write a function definition named forth that takes in sequence and returns the forth value of that sequence.
+def forth(x):
+    return x[3]
 
 assert forth("ubuntu") == "n"
 assert forth([1, 2, 3, 4]) == 4
@@ -694,6 +702,9 @@ print("Exercise 53 is correct.")
 
 # Exercise 54
 # Write a function definition named last that takes in sequence and returns the last value of that sequence.
+def last(x):
+    lastPos = len(x) - 1
+    return x[lastPos]
 
 assert last("ubuntu") == "u"
 assert last([1, 2, 3, 4]) == 4
@@ -703,6 +714,9 @@ print("Exercise 54 is correct.")
 
 # Exercise 55
 # Write a function definition named second_to_last that takes in sequence and returns the second to last value of that sequence.
+def second_to_last(x):
+    secondToLastPos = len(x) - 2
+    return x[secondToLastPos]
 
 assert second_to_last("ubuntu") == "t"
 assert second_to_last([1, 2, 3, 4]) == 3
@@ -712,6 +726,9 @@ print("Exercise 55 is correct.")
 
 # Exercise 56
 # Write a function definition named third_to_last that takes in sequence and returns the third to last value of that sequence.
+def third_to_last(x):
+    thirdToLastPos = len(x) - 3
+    return x[thirdToLastPos]
 
 assert third_to_last("ubuntu") == "n"
 assert third_to_last([1, 2, 3, 4]) == 2
@@ -721,6 +738,9 @@ print("Exercise 56 is correct.")
 
 # Exercise 57
 # Write a function definition named first_and_second that takes in sequence and returns the first and second value of that sequence as a list
+def first_and_second(x):
+    firstAndSecond = [x[0], x[1]]
+    return firstAndSecond
 
 assert first_and_second([1, 2, 3, 4]) == [1, 2]
 assert first_and_second(["python", "is", "awesome"]) == ["python", "is"]
@@ -729,6 +749,10 @@ print("Exercise 57 is correct.")
 
 # Exercise 58
 # Write a function definition named first_and_last that takes in sequence and returns the first and last value of that sequence as a list
+def first_and_last(x):
+    lastPos = len(x) - 1
+    firstAndLast = [x[0], x[lastPos]]
+    return firstAndLast
 
 assert first_and_last([1, 2, 3, 4]) == [1, 4]
 assert first_and_last(["python", "is", "awesome"]) == ["python", "awesome"]
@@ -737,6 +761,10 @@ print("Exercise 58 is correct.")
 
 # Exercise 59
 # Write a function definition named first_to_last that takes in sequence and returns the sequence with the first value moved to the end of the sequence.
+def first_to_last(x):
+    y = x[1::]
+    y.append(x[0])
+    return y
 
 assert first_to_last([1, 2, 3, 4]) == [2, 3, 4, 1]
 assert first_to_last(["python", "is", "awesome"]) == ["is", "awesome", "python"]
