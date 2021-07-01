@@ -538,7 +538,13 @@ If you need some guidance working with the next few problems, recommend reading 
 
 # Exercise 43
 # Write a function definition named is_vowel that takes in value and returns True if the value is a, e, i, o, u in upper or lower case.
-
+def is_vowel(string):
+    if len(string) > 1:
+        return False
+    if string == 'a' or string == 'e' or string == 'i'or string == 'o' or string == 'u' or string == 'A' or string == 'E' or string == 'I' or string == 'O' or string == 'U':
+        return True
+    else:
+        return False
 
 assert is_vowel("a") == True
 assert is_vowel("e") == True
@@ -559,6 +565,13 @@ print("Exercise 43 is correct.")
 
 # Exercise 44
 # Write a function definition named has_vowels that takes in value and returns True if the string contains any vowels.
+def has_vowels(string):
+    letters = list(string)
+    for letter in letters:
+        if is_vowel(letter):
+            return True
+
+    return False
 
 assert has_vowels("banana") == True
 assert has_vowels("ubuntu") == True
@@ -568,6 +581,14 @@ print("Exercise 44 is correct.")
 
 # Exercise 45
 # Write a function definition named count_vowels that takes in value and returns the count of the nubmer of vowels in a sequence.
+def count_vowels(string):
+    letters = list(string)
+    numOfVowels = 0
+    for letter in letters:
+        if is_vowel(letter):
+            numOfVowels += 1
+
+    return numOfVowels
 
 assert count_vowels("banana") == 3
 assert count_vowels("ubuntu") == 3
@@ -578,6 +599,16 @@ print("Exercise 45 is correct.")
 
 # Exercise 46
 # Write a function definition named remove_vowels that takes in string and returns the string without any vowels
+def remove_vowels(string):
+    letters = list(string)
+    newString = ''
+    for letter in letters:
+        if is_vowel(letter):
+            None
+        else:
+            newString += letter
+
+    return newString
 
 assert remove_vowels("banana") == "bnn"
 assert remove_vowels("ubuntu") == "bnt"
@@ -587,6 +618,11 @@ print("Exercise 46 is correct.")
 
 # Exercise 47
 # Write a function definition named starts_with_vowel that takes in string and True if the string starts with a vowel
+def starts_with_vowel(string):
+    if is_vowel(string[0]):
+        return True
+    else:
+        return False
 
 assert starts_with_vowel("ubuntu") == True
 assert starts_with_vowel("banana") == False
@@ -595,6 +631,12 @@ print("Exercise 47 is correct.")
 
 # Exercise 48
 # Write a function definition named ends_with_vowel that takes in string and True if the string ends with a vowel
+def ends_with_vowel(string):
+    lastChar = len(string) - 1
+    if is_vowel(string[lastChar]):
+        return True
+    else:
+        return False
 
 assert ends_with_vowel("ubuntu") == True
 assert ends_with_vowel("banana") == True
@@ -604,6 +646,12 @@ print("Exercise 48 is correct.")
 
 # Exercise 49
 # Write a function definition named starts_and_ends_with_vowel that takes in string and returns True if the string starts and ends with a vowel
+def starts_and_ends_with_vowel(string):
+    lastChar = len(string) - 1
+    if is_vowel(string[0]) and is_vowel(string[lastChar]):
+        return True
+    else:
+        return False
 
 assert starts_and_ends_with_vowel("ubuntu") == True
 assert starts_and_ends_with_vowel("banana") == False
