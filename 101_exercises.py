@@ -775,6 +775,15 @@ print("Exercise 59 is correct.")
 
 # Exercise 60
 # Write a function definition named sum_all that takes in sequence of numbers and returns all the numbers added together.
+def sum_all(x):
+    i = 0
+    lastIndexOfX = len(x)
+    sumOfAllPos = 0
+    while i < lastIndexOfX:
+        sumOfAllPos += x[i]
+        i += 1
+
+    return sumOfAllPos
 
 assert sum_all([1, 2, 3, 4]) == 10
 assert sum_all([3, 3, 3]) == 9
@@ -783,6 +792,9 @@ print("Exercise 60 is correct.")
 
 # Exercise 61
 # Write a function definition named mean that takes in sequence of numbers and returns the average value
+def mean(x):
+    meanvalue = sum_all(x) / len(x)
+    return meanvalue
 
 assert mean([1, 2, 3, 4]) == 2.5
 assert mean([3, 3, 3]) == 3
@@ -791,6 +803,10 @@ print("Exercise 61 is correct.")
 
 # Exercise 62
 # Write a function definition named median that takes in sequence of numbers and returns the average value
+import statistics
+
+def median(x):
+    return statistics.median(x) 
 
 assert median([1, 2, 3, 4, 5]) == 3.0
 assert median([1, 2, 3]) == 2.0
@@ -800,6 +816,8 @@ print("Exercise 62 is correct.")
 
 # Exercise 63
 # Write a function definition named mode that takes in sequence of numbers and returns the most commonly occuring value
+def mode(x):
+    return statistics.mode(x)
 
 assert mode([1, 2, 2, 3, 4]) == 2
 assert mode([1, 1, 2, 3]) == 1
@@ -808,6 +826,14 @@ print("Exercise 63 is correct.")
 
 # Exercise 64
 # Write a function definition named product_of_all that takes in sequence of numbers and returns the product of multiplying all the numbers together
+def product_of_all(x):
+    product = x[0]
+    i = 1
+    while i < len(x):
+       product = product * x[i]
+       i += 1
+       
+    return product
 
 assert product_of_all([1, 2, 3]) == 6
 assert product_of_all([3, 4, 5]) == 60
