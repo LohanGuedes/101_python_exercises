@@ -844,6 +844,13 @@ print("Exercise 64 is correct.")
 
 # Exercise 65
 # Write a function definition named get_highest_number that takes in sequence of numbers and returns the largest number.
+def get_highest_number(x):
+    highest = x[0]
+    for i in x:
+        if i > highest:
+            highest = i
+
+    return highest
 
 assert get_highest_number([1, 2, 3]) == 3
 assert get_highest_number([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]) == 5
@@ -852,6 +859,13 @@ print("Exercise 65 is correct.")
 
 # Exercise 66
 # Write a function definition named get_smallest_number that takes in sequence of numbers and returns the smallest number.
+def get_smallest_number(x):
+    smallest = x[0]
+    for i in x:
+        if i < smallest:
+            smallest = i
+
+    return smallest
 
 assert get_smallest_number([1, 3, 2]) == 1
 assert get_smallest_number([5, -5, -4, -3, -2, -1, 1, 2, 3, 4]) == -5
@@ -860,6 +874,8 @@ print("Exercise 66 is correct.")
 
 # Exercise 67
 # Write a function definition named only_odd_numbers that takes in sequence of numbers and returns the odd numbers in a list.
+def only_odd_numbers(x):
+    
 
 assert only_odd_numbers([1, 2, 3]) == [1, 3]
 assert only_odd_numbers([-5, -4, -3, -2, -1, 1, 2, 3, 4, 5]) == [-5, -3, -1, 1, 3, 5]
